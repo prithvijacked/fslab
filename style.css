@@ -12,58 +12,58 @@ body {
 .h1 {
     font-size: 2.5em;
     color: #4A90E2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-/* Table Styles */
+/* Container Styles */
 .div1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap;
     margin: auto;
+}
+
+/* Card Styles */
+.card {
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    width: 250px; /* Fixed width for cards */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-th {
-    background-color: #4A90E2;
-    color: white;
-    padding: 10px;
+/* Card Title and Link Styles */
+.card h3 {
+    color: #D9534F; /* Title color */
+    margin-bottom: 10px;
 }
 
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-tr:hover {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Link Styles */
-.e1 {
+.card a {
     color: #4A90E2;
     text-decoration: none;
     font-weight: bold;
+    border: 2px solid #4A90E2;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.e1:hover {
-    text-decoration: underline;
-    color: #D9534F;
+.card a:hover {
+    background-color: #4A90E2;
+    color: white; /* Change text color on hover */
 }
 
-/* Responsive Table */
+/* Responsive Design */
 @media (max-width: 768px) {
-    table {
-        width: 100%;
+    .div1 {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
     }
 }
