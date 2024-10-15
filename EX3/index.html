@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microblog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Microblog</h1>
+    </header>
+    
+    <main>
+        <section id="post-form">
+            <h2>Share Your Thoughts</h2>
+            <form id="new-post-form">
+                <textarea id="post-content" rows="4" placeholder="What's on your mind?" required></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+
+        <section id="posts">
+            <h2>Recent Posts</h2>
+            <div id="post-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Microblog</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
