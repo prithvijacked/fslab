@@ -1,33 +1,59 @@
-const restaurants = [
-    { id: 1, name: 'Pizza Place', menu: ['Margherita', 'Pepperoni', 'BBQ Chicken'] },
-    { id: 2, name: 'Sushi Spot', menu: ['California Roll', 'Spicy Tuna', 'Sashimi'] },
-];
+const menuData = {
+    "Pizza Place": [
+        { name: "Margherita Pizza", price: 8 },
+        { name: "Pepperoni Pizza", price: 10 },
+        { name: "Veggie Pizza", price: 9 },
+    ],
+    "Sushi Spot": [
+        { name: "California Roll", price: 12 },
+        { name: "Sushi Combo", price: 15 },
+        { name: "Salmon Sashimi", price: 14 },
+    ],
+    "Burger Joint": [
+        { name: "Cheeseburger", price: 7 },
+        { name: "Veggie Burger", price: 6 },
+        { name: "Double Burger", price: 10 },
+    ],
+};
 
-function loadRestaurants() {
-    const restaurantDiv = document.getElementById('restaurants');
-    restaurants.forEach(restaurant => {
-        const div = document.createElement('div');
-        div.className = 'restaurant';
-        div.textContent = restaurant.name;
-        div.onclick = () => loadMenu(restaurant);
-        restaurantDiv.appendChild(div);
-    });
-}
-
-function loadMenu(restaurant) {
+document.getElementById('restaurantSelect').addEventListener('change', function() {
+    const selectedRestaurant = this.value;
     const menuDiv = document.getElementById('menu');
-    menuDiv.innerHTML = `<h3>${restaurant.name} Menu</h3>`;
-    restaurant.menu.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'menu-item';
-        div.textContent = item;
-        div.onclick = () => orderFood(item);
-        menuDiv.appendChild(div);
+    menuDiv.innerHTML = '';
+
+    if (selectedRestaurant) {
+        menuData[selectedRestaurant].forEach(item => {
+            const menuItem = document.createElement('div');
+            menuItem.classList.add('menu-item');
+            menuItem.innerHTML = `${item.name} - $${item.price} <button onclick="addToOrder('${item.name}', ${item.price})">Add</button>`;
+            menuDiv.appendChild(menuItem);
+        });
+    }
+});
+
+let order = [];
+
+function addToOrder(itemName, itemPrice) {
+    order.push({ name: itemName, price: itemPrice });
+    updateOrderList();
+}
+
+function updateOrderList() {
+    const orderList = document.getElementById('orderList');
+    orderList.innerHTML = '';
+    order.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        orderList.appendChild(li);
     });
 }
 
-function orderFood(item) {
-    alert(`You ordered: ${item}`);
-}
-
-window.onload = loadRestaurants;
+document.getElementById('placeOrder').addEventListener('click', function() {
+    if (order.length > 0) {
+        alert('Your order has been placed!');
+        order = [];
+        updateOrderList();
+    } else {
+        alert('Please add items to your order before placing.');
+    }
+});
