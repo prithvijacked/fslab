@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy and Sell Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Buy and Sell Marketplace</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food-delivery.html">Food Delivery</a>
+            <a href="buy-sell.html">Buy and Sell</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="post-form">
+            <h2>List an Item for Sale</h2>
+            <form id="new-item-form">
+                <input type="text" id="item-name" placeholder="Item Name" required>
+                <input type="text" id="item-price" placeholder="Price" required>
+                <button type="submit">List Item</button>
+            </form>
+        </section>
+
+        <section id="items">
+            <h2>Items for Sale</h2>
+            <ul id="item-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name</p>
+    </footer>
+
+    <script src="buy-sell.js"></script>
+</body>
+</html>
