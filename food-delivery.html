@@ -3,45 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery Service</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Food Delivery Service</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="food-delivery.html">Food Delivery</a>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="restaurant-selection">
-            <h2>Select a Restaurant</h2>
-            <select id="restaurantSelect">
-                <option value="">Select a restaurant</option>
-                <option value="Pizza Place">Pizza Place</option>
-                <option value="Sushi Spot">Sushi Spot</option>
-                <option value="Burger Joint">Burger Joint</option>
-            </select>
-        </section>
+        
+        <select id="restaurantSelect">
+            <option value="">Select a restaurant</option>
+            <option value="Pizza Place">Pizza Place</option>
+            <option value="Sushi Spot">Sushi Spot</option>
+            <option value="Burger Joint">Burger Joint</option>
+        </select>
 
-        <section id="menu">
-            <h2>Menu</h2>
-            <div id="menuList"></div>
-        </section>
+        <div id="menu" class="menu"></div>
+        
+        <h2>Your Order</h2>
+        <ul id="orderList"></ul>
+        
+        <h2>Delivery Address</h2>
+        <input type="text" id="deliveryAddress" placeholder="Enter your delivery address" required>
+        
+        <button id="placeOrder">Checkout</button>
+    </div>
 
-        <section id="order">
-            <h2>Your Order</h2>
-            <ul id="orderList"></ul>
-            <button id="placeOrder">Place Order</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 Your Name</p>
-    </footer>
-
-    <script src="food-delivery.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
