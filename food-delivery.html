@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Food Delivery Service</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="food-delivery.html">Food Delivery</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="restaurant-selection">
+            <h2>Select a Restaurant</h2>
+            <select id="restaurantSelect">
+                <option value="">Select a restaurant</option>
+                <option value="Pizza Place">Pizza Place</option>
+                <option value="Sushi Spot">Sushi Spot</option>
+                <option value="Burger Joint">Burger Joint</option>
+            </select>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <div id="menuList"></div>
+        </section>
+
+        <section id="order">
+            <h2>Your Order</h2>
+            <ul id="orderList"></ul>
+            <button id="placeOrder">Place Order</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name</p>
+    </footer>
+
+    <script src="food-delivery.js"></script>
+</body>
+</html>
