@@ -3,32 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Food Delivery Service</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Food Delivery Service</h1>
+    <h1>Welcome to Our Food Delivery Service</h1>
+    
+    <div class="restaurant-container">
+        <h2>Select a Restaurant</h2>
+        <div class="restaurant" id="restaurant1">
+            <h3>Restaurant 1</h3>
+            <ul>
+                <li><input type="checkbox" value="Pizza"> Pizza - $10</li>
+                <li><input type="checkbox" value="Burger"> Burger - $8</li>
+                <li><input type="checkbox" value="Pasta"> Pasta - $12</li>
+                <li><input type="checkbox" value="Salad"> Salad - $7</li>
+            </ul>
+        </div>
         
-        <select id="restaurantSelect">
-            <option value="">Select a restaurant</option>
-            <option value="Pizza Place">Pizza Place</option>
-            <option value="Sushi Spot">Sushi Spot</option>
-            <option value="Burger Joint">Burger Joint</option>
-        </select>
+        <div class="restaurant" id="restaurant2">
+            <h3>Restaurant 2</h3>
+            <ul>
+                <li><input type="checkbox" value="Sushi"> Sushi - $15</li>
+                <li><input type="checkbox" value="Ramen"> Ramen - $10</li>
+                <li><input type="checkbox" value="Tempura"> Tempura - $12</li>
+                <li><input type="checkbox" value="Dumplings"> Dumplings - $8</li>
+            </ul>
+        </div>
+        
+        <div class="restaurant" id="restaurant3">
+            <h3>Restaurant 3</h3>
+            <ul>
+                <li><input type="checkbox" value="Tacos"> Tacos - $9</li>
+                <li><input type="checkbox" value="Nachos"> Nachos - $7</li>
+                <li><input type="checkbox" value="Burrito"> Burrito - $11</li>
+                <li><input type="checkbox" value="Quesadilla"> Quesadilla - $8</li>
+            </ul>
+        </div>
+        
+        <div class="restaurant" id="restaurant4">
+            <h3>Restaurant 4</h3>
+            <ul>
+                <li><input type="checkbox" value="Steak"> Steak - $20</li>
+                <li><input type="checkbox" value="Fish"> Fish - $15</li>
+                <li><input type="checkbox" value="Chicken"> Chicken - $12</li>
+                <li><input type="checkbox" value="Veggie"> Veggie Platter - $10</li>
+            </ul>
+        </div>
+    </div>
 
-        <div id="menu" class="menu"></div>
-        
-        <h2>Your Order</h2>
-        <ul id="orderList"></ul>
-        
+    <div class="delivery-info">
         <h2>Delivery Address</h2>
-        <input type="text" id="deliveryAddress" placeholder="Enter your delivery address" required>
-        
-        <button id="placeOrder">Checkout</button>
+        <input type="text" id="address" placeholder="Enter your delivery address" required>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <div id="checkout" class="hidden">
+        <h2>Checkout</h2>
+        <p id="order-summary"></p>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
