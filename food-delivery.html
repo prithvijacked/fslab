@@ -3,66 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery Service</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Our Food Delivery Service</h1>
-    
-    <div class="restaurant-container">
-        <h2>Select a Restaurant</h2>
-        <div class="restaurant" id="restaurant1">
-            <h3>Restaurant 1</h3>
-            <ul>
-                <li><input type="checkbox" value="Pizza"> Pizza - $10</li>
-                <li><input type="checkbox" value="Burger"> Burger - $8</li>
-                <li><input type="checkbox" value="Pasta"> Pasta - $12</li>
-                <li><input type="checkbox" value="Salad"> Salad - $7</li>
-            </ul>
+    <header>
+        <h1>Food Delivery Service</h1>
+    </header>
+    <main>
+        <h2>Our Restaurants</h2>
+        <div class="restaurant-list">
+            <div class="restaurant" onclick="location.href='restaurant.html?restaurant=1'">
+                <img src="restaurant1.jpg" alt="Restaurant 1">
+                <h3>Restaurant 1</h3>
+            </div>
+            <div class="restaurant" onclick="location.href='restaurant.html?restaurant=2'">
+                <img src="restaurant2.jpg" alt="Restaurant 2">
+                <h3>Restaurant 2</h3>
+            </div>
+            <div class="restaurant" onclick="location.href='restaurant.html?restaurant=3'">
+                <img src="restaurant3.jpg" alt="Restaurant 3">
+                <h3>Restaurant 3</h3>
+            </div>
+            <div class="restaurant" onclick="location.href='restaurant.html?restaurant=4'">
+                <img src="restaurant4.jpg" alt="Restaurant 4">
+                <h3>Restaurant 4</h3>
+            </div>
         </div>
-        
-        <div class="restaurant" id="restaurant2">
-            <h3>Restaurant 2</h3>
-            <ul>
-                <li><input type="checkbox" value="Sushi"> Sushi - $15</li>
-                <li><input type="checkbox" value="Ramen"> Ramen - $10</li>
-                <li><input type="checkbox" value="Tempura"> Tempura - $12</li>
-                <li><input type="checkbox" value="Dumplings"> Dumplings - $8</li>
-            </ul>
-        </div>
-        
-        <div class="restaurant" id="restaurant3">
-            <h3>Restaurant 3</h3>
-            <ul>
-                <li><input type="checkbox" value="Tacos"> Tacos - $9</li>
-                <li><input type="checkbox" value="Nachos"> Nachos - $7</li>
-                <li><input type="checkbox" value="Burrito"> Burrito - $11</li>
-                <li><input type="checkbox" value="Quesadilla"> Quesadilla - $8</li>
-            </ul>
-        </div>
-        
-        <div class="restaurant" id="restaurant4">
-            <h3>Restaurant 4</h3>
-            <ul>
-                <li><input type="checkbox" value="Steak"> Steak - $20</li>
-                <li><input type="checkbox" value="Fish"> Fish - $15</li>
-                <li><input type="checkbox" value="Chicken"> Chicken - $12</li>
-                <li><input type="checkbox" value="Veggie"> Veggie Platter - $10</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="delivery-info">
-        <h2>Delivery Address</h2>
-        <input type="text" id="address" placeholder="Enter your delivery address" required>
-        <button onclick="checkout()">Checkout</button>
-    </div>
-
-    <div id="checkout" class="hidden">
-        <h2>Checkout</h2>
-        <p id="order-summary"></p>
-    </div>
-
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant Menu</h1>
+    </header>
+    <main>
+        <div id="menu"></div>
+        <button id="checkout-button">Proceed to Checkout</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <form id="checkout-form">
+            <label for="address">Enter your address:</label>
+            <input type="text" id="address" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
