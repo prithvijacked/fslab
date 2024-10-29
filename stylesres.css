@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f8b400;
+    padding: 1em;
+    text-align: center;
+}
+
+.restaurant-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.restaurant {
+    cursor: pointer;
+    text-align: center;
+    margin: 20px;
+}
+
+.restaurant img {
+    width: 150px;
+    height: 150px;
+}
+
+#menu {
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f8b400;
+    border: none;
+    cursor: pointer;
+}
