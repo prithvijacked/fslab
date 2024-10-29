@@ -2,9 +2,9 @@ const restaurantData = {
     1: {
         name: "Wendy's",
         menu: [
-            { name: "Burger", price: 5.99, image: "burger.jpg" },
-            { name: "Frosty", price: 2.99, image: "frosty.jpg" },
-            { name: "Chicken Nuggets", price: 4.99, image: "nuggets.jpg" }
+            { name: "Burger", price: 5.99, image: "images/burger.jpg" },
+            { name: "Frosty", price: 2.99, image: "images/frosty.jpg" },
+            { name: "Chicken Nuggets", price: 4.99, image: "images/nuggets.jpg" }
         ]
     },
     2: {
