@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classified Ads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #app {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="file"], input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .ad-list {
+            margin-top: 20px;
+        }
+        .ad-item {
+            background: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+        }
+        .ad-item img {
+            max-width: 100%;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <h1>Classified Ads</h1>
+    <input type="text" id="title" placeholder="Product Title">
+    <input type="text" id="description" placeholder="Product Description">
+    <input type="number" id="price" placeholder="Price" min="0">
+    <input type="file" id="image" accept="image/*">
+    <button onclick="addAd()">Post Ad</button>
+
+    <div class="ad-list" id="adList"></div>
+</div>
+
+<script>
+    function addAd() {
+        const title = document.getElementById('title').value.trim();
+        const description = document.getElementById('description').value.trim();
+        const price = document.getElementById('price').value.trim();
+        const imageInput = document.getElementById('image');
+        
+        if (title && description && price && imageInput.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const adList = document.getElementById('adList');
+                const adItem = document.createElement('div');
+                adItem.className = 'ad-item';
+                
+                adItem.innerHTML = `
+                    <h3>${title}</h3>
+                    <p>${description}</p>
+                    <p>Price: $${price}</p>
+                    <img src="${e.target.result}" alt="${title}">
+                `;
+
+                adList.appendChild(adItem);
+                clearFields();
+            };
+            reader.readAsDataURL(imageInput.files[0]);
+        } else {
+            alert('Please fill in all fields and select an image.');
+        }
+    }
+
+    function clearFields() {
+        document.getElementById('title').value = '';
+        document.getElementById('description').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('image').value = '';
+    }
+</script>
+
+</body>
+</html>
