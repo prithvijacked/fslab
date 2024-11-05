@@ -10,9 +10,9 @@ const restaurantData = {
     2: {
         name: "M'cDonald's",
         menu: [
-            { name: "Big Mac", price: 3.99, image: "bigmac.jpg" },
-            { name: "Fries", price: 1.99, image: "fries.jpg" },
-            { name: "McFlurry", price: 2.49, image: "mcflurry.jpg" }
+            { name: "Big Mac", price: 3.99, image: "images/bigmac.jpg" },
+            { name: "Fries", price: 1.99, image: "images/fries.jpg" },
+            { name: "McFlurry", price: 2.49, image: "images/mcflurry.jpg" }
         ]
     },
     3: {
