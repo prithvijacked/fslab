@@ -2,17 +2,17 @@ const restaurantData = {
     1: {
         name: "Wendy's",
         menu: [
-            { name: "Burger", price: 5.99, image: "images/burger.jpg" },
-            { name: "Frosty", price: 2.99, image: "images/frosty.jpg" },
-            { name: "Chicken Nuggets", price: 4.99, image: "images/nuggets.jpg" }
+            { name: "Burger", price: 5.99, image: "burger.jpg" },
+            { name: "Frosty", price: 2.99, image: "frosty.jpg" },
+            { name: "Chicken Nuggets", price: 4.99, image: "nuggets.jpg" }
         ]
     },
     2: {
         name: "M'cDonald's",
         menu: [
-            { name: "Big Mac", price: 3.99, image: "images/bigmac.jpg" },
-            { name: "Fries", price: 1.99, image: "images/fries.jpg" },
-            { name: "McFlurry", price: 2.49, image: "images/mcflurry.jpg" }
+            { name: "Big Mac", price: 3.99, image: "bigmac.jpg" },
+            { name: "Fries", price: 1.99, image: "fries.jpg" },
+            { name: "McFlurry", price: 2.49, image: "mcflurry.jpg" }
         ]
     },
     3: {
