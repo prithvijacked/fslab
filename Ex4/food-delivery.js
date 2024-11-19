@@ -18,7 +18,7 @@ const restaurantData = {
     3: {
         name: "Burger King",
         menu: [
-            { name: "Whopper", price: 4.99, image: "whopper.jpg" },
+            { name: "Whopper", price: 4.99, image: "whooper.jpg" },
             { name: "Onion Rings", price: 2.29, image: "onion.jpg" },
             { name: "Ice Cream", price: 1.89, image: "ice.jpg" }
         ]
